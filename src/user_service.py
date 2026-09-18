@@ -1,7 +1,7 @@
-﻿def register_user(username: str, email: str) -> dict:
+def register_user(username: str, email: str) -> dict:
     if not username or not username.strip():
         raise ValueError('Username cannot be empty')
-    if '@' not in email:
+    if not email or '@' not in email:
         raise ValueError('Invalid email format')
     return {
         'id': 'USR-9999',
